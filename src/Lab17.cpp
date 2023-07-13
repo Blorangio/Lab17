@@ -56,10 +56,10 @@ typedef struct State State_t;
 
 State_t fsm[4] =
     {
-        {NorthGo, 5000, {NorthGo, EastSlow, NorthGo, EastSlow}},
-        {NorthSlow, 5000, {NorthGo, NorthGo, NorthGo, NorthGo}},
-        {EastGo, 5000, {EastGo, EastGo, NorthSlow, NorthSlow}},
-        {EastSlow, 5000, {EastGo, EastGo, EastGo, EastGo}}};
+        {NorthGo, 5000, {NorthGo, NorthSlow, NorthGo, NorthSlow}},
+        {NorthSlow, 5000, {EastGo, EastGo, EastGo, EastGo}},
+        {EastGo, 5000, {EastGo, EastGo, EastSlow, EastSlow}},
+        {EastSlow, 5000, {NorthGo, NorthGo, NorthGo, NorthGo}}};
 
 void setup()
 {
